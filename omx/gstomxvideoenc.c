@@ -2976,6 +2976,8 @@ gst_omx_video_enc_set_format (GstVideoEncoder * encoder,
   GST_DEBUG_OBJECT (self, "Setting new input format: %" GST_PTR_FORMAT, caps);
   gst_caps_unref (caps);
 
+  GST_DEBUG_OBJECT (self, "getting port definition....");
+  
   gst_omx_port_get_port_definition (self->enc_in_port, &port_def);
 
   needs_disable =
